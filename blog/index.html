@@ -8,117 +8,47 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
 :root {
-  --o: #F2BE00;
-  --oh: #C49A00;
-  --acc: #005FCC;
-  --navy: #003366;
-  --white: #FFFFFF;
-  --off: #F7F8FA;
-  --body: #2A3848;
-  --mid: #566474;
-  --muted: #8898A8;
-  --rule: #E5E7EB;
-  --f: 'Inter', system-ui, sans-serif;
-  --m: 'DM Mono', monospace;
+  --o: #F2BE00; --oh: #C49A00; --acc: #005FCC; --navy: #003366;
+  --white: #FFFFFF; --off: #F7F8FA; --body: #2A3848; --mid: #566474;
+  --muted: #8898A8; --rule: #E5E7EB;
+  --f: 'Inter', system-ui, sans-serif; --m: 'DM Mono', monospace;
 }
-
 html { scroll-behavior: smooth; }
-body {
-  background: var(--white);
-  color: var(--body);
-  font-family: var(--f);
-  font-size: 16px;
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-}
+body { background: var(--white); color: var(--body); font-family: var(--f); font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
 
-/* NAV */
-nav {
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  z-index: 200;
-  height: 56px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 5%;
-  background: rgba(255,255,255,0.97);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--rule);
-}
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: 56px; display: flex; align-items: center; justify-content: space-between; padding: 0 5%; background: rgba(255,255,255,0.97); backdrop-filter: blur(12px); border-bottom: 1px solid var(--rule); }
 .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
 .logo img { height: 48px; width: auto; display: block; }
 .nav-r { display: flex; align-items: center; gap: 2rem; }
 .nav-a { font-size: 13px; font-weight: 500; color: var(--mid); text-decoration: none; transition: color .15s; }
 .nav-a:hover { color: var(--navy); }
 .nav-a.active { color: var(--navy); }
-.nav-btn {
-  font-size: 12px; font-weight: 700; letter-spacing: 0.06em;
-  text-transform: uppercase; color: var(--navy); background: var(--o);
-  padding: 0.5rem 1.25rem; text-decoration: none; transition: background .15s;
-}
+.nav-btn { font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--navy); background: var(--o); padding: 0.5rem 1.25rem; text-decoration: none; transition: background .15s; }
 .nav-btn:hover { background: var(--oh); }
 
-/* PAGE HEADER */
-.page-header {
-  padding: 120px 5% 64px;
-  border-bottom: 3px solid var(--o);
-  background: var(--navy);
-}
+.page-header { padding: 120px 5% 64px; border-bottom: 3px solid var(--o); background: var(--navy); }
 .page-header-inner { max-width: 1200px; margin: 0 auto; }
-.page-tag {
-  font-family: var(--m);
-  font-size: 10px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase;
-  color: rgba(242,190,0,0.85); display: flex; align-items: center; gap: 0.6rem; margin-bottom: 1rem;
-}
+.page-tag { font-family: var(--m); font-size: 10px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(242,190,0,0.85); display: flex; align-items: center; gap: 0.6rem; margin-bottom: 1rem; }
 .page-tag::before { content: ''; width: 16px; height: 1px; background: rgba(242,190,0,0.85); }
-.page-title {
-  font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 700; color: #fff;
-  letter-spacing: -0.025em; line-height: 1.08;
-}
+.page-title { font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 700; color: #fff; letter-spacing: -0.025em; line-height: 1.08; }
 
-/* COMING SOON */
-.coming-soon {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 100px 5%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-.coming-soon-icon {
-  width: 56px; height: 56px;
-  border: 2px solid var(--rule);
-  border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  margin-bottom: 2rem;
-}
-.coming-soon-icon svg { width: 24px; height: 24px; }
-.coming-soon h2 {
-  font-size: 1.4rem; font-weight: 700; color: var(--navy);
-  letter-spacing: -0.02em; margin-bottom: 0.75rem;
-}
-.coming-soon p {
-  font-size: 15px; color: var(--mid); line-height: 1.7;
-  max-width: 480px; margin-bottom: 2.5rem;
-}
-.coming-soon-cta {
-  font-family: var(--m);
-  font-size: 12px; font-weight: 700; letter-spacing: 0.06em;
-  text-transform: uppercase; color: var(--navy); background: var(--o);
-  padding: 0.75rem 1.75rem; text-decoration: none; transition: background .15s;
-}
-.coming-soon-cta:hover { background: var(--oh); }
+.posts-section { max-width: 1200px; margin: 0 auto; padding: 0 5% 100px; }
 
-/* FOOTER */
+.post-card { display: grid; grid-template-columns: 200px 1fr; gap: 3rem; padding: 3rem 0; border-bottom: 1px solid var(--rule); text-decoration: none; color: inherit; transition: opacity .15s; }
+.post-card:first-child { border-top: 1px solid var(--rule); margin-top: 3rem; }
+.post-card:hover { opacity: 0.8; }
+.post-meta {}
+.post-date { font-family: var(--m); font-size: 11px; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 0.5rem; }
+.post-category { display: inline-block; font-family: var(--m); font-size: 9.5px; letter-spacing: 0.06em; padding: 0.2rem 0.65rem; background: #EEF4FF; color: var(--acc); border: 1px solid rgba(0,95,204,0.3); }
+.post-title { font-size: 1.35rem; font-weight: 700; color: var(--navy); letter-spacing: -0.02em; line-height: 1.2; margin-bottom: 0.5rem; }
+.post-subtitle { font-size: 0.95rem; font-style: italic; color: var(--mid); margin-bottom: 1rem; line-height: 1.5; }
+.post-excerpt { font-size: 14px; color: var(--mid); line-height: 1.7; max-width: 600px; margin-bottom: 1.25rem; }
+.post-read { font-family: var(--m); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--acc); display: inline-flex; align-items: center; gap: 0.4rem; }
+.post-read::after { content: '→'; }
+
 footer { background: #F7F8FA; padding: 1.25rem 5% 1rem; border-top: 3px solid var(--acc); }
-.ft-top {
-  display: flex; justify-content: space-between; align-items: flex-start;
-  padding-bottom: 1rem; border-bottom: 1px solid var(--rule); margin-bottom: 0.75rem; gap: 3rem;
-}
+.ft-top { display: flex; justify-content: space-between; align-items: flex-start; padding-bottom: 1rem; border-bottom: 1px solid var(--rule); margin-bottom: 0.75rem; gap: 3rem; }
 .ft-brand { max-width: 280px; }
 .ft-logo { display: flex; align-items: center; gap: 10px; margin-bottom: 0.4rem; }
 .ft-logo img { height: 40px; width: auto; display: block; }
@@ -136,6 +66,7 @@ footer { background: #F7F8FA; padding: 1.25rem 5% 1rem; border-top: 3px solid va
 @media (max-width: 860px) {
   nav { padding: 0 1.5rem; }
   .nav-r { display: none; }
+  .post-card { grid-template-columns: 1fr; gap: 1rem; }
   .ft-top { flex-direction: column; gap: 2rem; }
   .ft-links { gap: 2.5rem; }
   .ft-bottom { flex-direction: column; gap: 0.5rem; text-align: center; }
@@ -165,15 +96,19 @@ footer { background: #F7F8FA; padding: 1.25rem 5% 1rem; border-top: 3px solid va
   </div>
 </div>
 
-<div class="coming-soon">
-  <div class="coming-soon-icon">
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z" fill="#8898A8"/>
-    </svg>
-  </div>
-  <h2>Posts coming soon.</h2>
-  <p>We're building in live production environments. Updates, announcements, and insights from the plant floor — coming shortly.</p>
-  <a href="/#contact" class="coming-soon-cta">Get notified — request access</a>
+<div class="posts-section">
+  <a class="post-card" href="/blog/ramp-ai-mcconway-torley/">
+    <div class="post-meta">
+      <div class="post-date">August 2026</div>
+      <div class="post-category">Case Study</div>
+    </div>
+    <div class="post-body">
+      <div class="post-title">RAMP AI at McConway &amp; Torley: From Guesswork to Answers</div>
+      <div class="post-subtitle">89% faster diagnosis on one fault. 94% of technicians said they'd resolve future faults without escalating.</div>
+      <p class="post-excerpt">Seventeen maintenance technicians across all three shifts — ranging from one month to seventeen years of tenure — worked RAMP AI through real faults on the coremaking line. The results held up against the judgment of the most experienced troubleshooter on site.</p>
+      <div class="post-read">Read case study</div>
+    </div>
+  </a>
 </div>
 
 <footer>
